@@ -34,10 +34,10 @@
             android:layout_gravity="center"
             android:background="@drawable/btn_textfield">
             <EditText
-                android:id="@+id/et_name_user"
+                android:id="@+id/et_name_user_rg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="10dp"
+                android:paddingLeft="8dp"
                 android:background="#00FF0000"
                 android:fontFamily="@font/poppins_medium"
                 android:inputType="textPersonName"
@@ -53,10 +53,10 @@
             android:layout_gravity="center"
             android:background="@drawable/btn_textfield">
             <EditText
-                android:id="@+id/et_email_user"
+                android:id="@+id/et_email_user_rg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="10dp"
+                android:paddingLeft="8dp"
                 android:background="#00FF0000"
                 android:fontFamily="@font/poppins_medium"
                 android:inputType="textEmailAddress"
@@ -71,10 +71,10 @@
             android:layout_gravity="center"
             android:background="@drawable/btn_textfield">
             <EditText
-                android:id="@+id/et_password_user"
+                android:id="@+id/et_password_user_rg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="10dp"
+                android:paddingLeft="8dp"
                 android:background="#00FF0000"
                 android:fontFamily="@font/poppins_medium"
                 android:inputType="textPassword"
@@ -89,7 +89,7 @@
             android:layout_gravity="end"
             android:background="@drawable/btn_orange">
             <Button
-                android:id="@+id/btn_registeruser"
+                android:id="@+id/btn_createaccount"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#00FFFFFF"

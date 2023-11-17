@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".HalamanTambahStock">
+    <RelativeLayout
+        android:layout_below="@+id/layoutatas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/layoutitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:background="@drawable/btn_orange">
+                <Spinner
+                    android:id="@+id/spinnerKategori"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:entries="@array/kategori_array"
+                    android:paddingLeft="10dp"
+                    android:prompt="@string/pilih_kategori" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="end">
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_orange">
+                    <Button
+                        android:id="@+id/btn_stock"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppins"
+                        android:background="#00FFFFFF"
+                        android:text="Add"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutitem">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewBarangUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

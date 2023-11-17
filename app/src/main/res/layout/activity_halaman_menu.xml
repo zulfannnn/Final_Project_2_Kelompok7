@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HalamanMenu">
+
+    <LinearLayout
+        android:id="@+id/layoutatas"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/fieldtop"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/fieldtokoku" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/fieldtop_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Welcome to Store"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutatas"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/layoutitem"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_hijau">
+
+            <Spinner
+                android:id="@+id/spinnerKategoriUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/kategori_array"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="8dp"
+                android:prompt="@string/pilih_kategori" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutitem">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewBarangUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

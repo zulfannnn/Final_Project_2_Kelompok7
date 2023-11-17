@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".TambahStock">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="729dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Tambah Barang"
+                android:fontFamily="@font/poppins"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_textfield">
+                    <EditText
+                        android:id="@+id/etNamaBarang"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00FF0000"
+                        android:paddingLeft="10dp"
+                        android:hint="Nama Barang" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_textfield">
+                    <EditText
+                        android:id="@+id/etHarga"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/etNamaBarang"
+                        android:background="#00FF0000"
+                        android:paddingLeft="10dp"
+                        android:inputType="number"
+                        android:hint="Harga Barang" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_textfield">
+                    <EditText
+                        android:id="@+id/etStok"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/etHarga"
+                        android:inputType="number"
+                        android:background="#00FF0000"
+                        android:paddingLeft="10dp"
+                        android:hint="Stok Barang" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:background="@drawable/btn_textfield">
+
+                    <ImageView
+                        android:id="@+id/imageProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:layout_below="@id/spinnerKategori"
+                        android:src="@drawable/ic_upload" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/btn_textfield">
+                    <Spinner
+                        android:id="@+id/spinnerKategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:layout_below="@id/etStok"
+                        android:layout_marginTop="16dp"
+                        android:entries="@array/kategori_array"
+                        android:prompt="@string/pilih_kategori" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="end"
+                android:layout_below="@id/spinnerKategori"
+                android:background="@drawable/btn_orange">
+                <Button
+                    android:id="@+id/btn_tambahbarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="@font/poppins"
+                    android:text="Tambah Barang"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

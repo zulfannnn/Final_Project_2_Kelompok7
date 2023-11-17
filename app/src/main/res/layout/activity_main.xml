@@ -39,6 +39,7 @@
             android:gravity="center_vertical"
             android:background="#00FFFFFF"
             android:fontFamily="@font/poppins_semibold"
+            android:paddingLeft="8dp"
             android:text="New User? REGISTER HERE!!!"
             android:textColor="@color/white"
             android:textSize="12sp"/>
@@ -59,6 +60,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:text="Already a member? LOGIN HERE!!!"
             android:textColor="@color/white"
+            android:paddingLeft="8dp"
             android:textSize="12sp"/>
     </LinearLayout>
 

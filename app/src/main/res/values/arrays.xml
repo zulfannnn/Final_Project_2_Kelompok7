@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="com_google_android_gms_fonts_certs" />
+
+    <string-array name="kategori_array">
+        <item>All Product</item>
+        <item>Elektronik</item>
+        <item>Book</item>
+        <item>Apparels</item>
+        <item>Smartwatch</item>
+    </string-array>
+
+    <string name="pilih_kategori">Pilih Kategori</string>
+
+    <string name="image_description">Gambar Barang</string>
+
+
 </resources>
+

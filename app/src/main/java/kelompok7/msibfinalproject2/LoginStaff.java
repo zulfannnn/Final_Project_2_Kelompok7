@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ElectronicActivity extends AppCompatActivity {
+public class LoginStaff extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_electronic);
+        setContentView(R.layout.activity_login_staff);
     }
 }
