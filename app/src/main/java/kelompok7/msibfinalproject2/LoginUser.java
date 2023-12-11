@@ -1,10 +1,8 @@
 package kelompok7.msibfinalproject2;
-
-
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,14 +29,12 @@ public class LoginUser extends AppCompatActivity {
             public void onClick(View v) {
                 String username = etnama.getText().toString().trim();
                 String password = etpassword.getText().toString().trim();
-
                 if (!username.isEmpty() && !password.isEmpty()) {
                     boolean success = dbHelper.checkUser(username, password);
-
                     if (success) {
                         Toast.makeText(LoginUser.this, "Login berhasil", Toast.LENGTH_SHORT).show();
-                        Intent intent;
-                        intent = new Intent(LoginUser.this, HalamanMenu.class);
+                        saveUserRole("user");
+                        Intent intent = new Intent(LoginUser.this, HalamanMenu.class);
                         startActivity(intent);
                         finish();
                     } else {
@@ -49,5 +45,11 @@ public class LoginUser extends AppCompatActivity {
                 }
             }
         });
+    }
+    private void saveUserRole(String role) {
+        SharedPreferences preferences = getSharedPreferences("user_preferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("user_role", role);
+        editor.apply();
     }
 }

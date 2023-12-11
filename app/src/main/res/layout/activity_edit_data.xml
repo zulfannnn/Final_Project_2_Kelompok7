@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".TambahStock">
+    tools:context=".EditData">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,17 +14,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:text="Tambah Barang"
+                android:text="Edit Barang"
                 android:fontFamily="@font/poppins"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:textColor="@color/text"/>
+                android:textColor="@color/text" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
@@ -36,25 +38,27 @@
                     android:background="@drawable/btn_textfield">
 
                     <ImageView
-                        android:id="@+id/imageProduct"
+                        android:id="@+id/imageProductEdit"
                         android:layout_width="match_parent"
                         android:layout_height="210dp"
-                        android:scaleType="fitCenter"
                         android:layout_below="@id/spinnerKategori"
                         android:src="@drawable/ic_upload" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:background="@drawable/btn_textfield">
+
                     <EditText
-                        android:id="@+id/etNamaBarang"
+                        android:id="@+id/etNamaBarangEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#00FF0000"
@@ -68,12 +72,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:background="@drawable/btn_textfield">
+
                     <EditText
-                        android:id="@+id/etHarga"
+                        android:id="@+id/etHargaBarangEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/etNamaBarang"
@@ -89,12 +95,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:background="@drawable/btn_textfield">
+
                     <EditText
-                        android:id="@+id/etStok"
+                        android:id="@+id/etStokBarangEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/etHarga"
@@ -104,17 +112,20 @@
                         android:hint="Stok Barang" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:background="@drawable/btn_textfield">
+
                     <Spinner
-                        android:id="@+id/spinnerKategori"
+                        android:id="@+id/spinnerKategoriEdit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
@@ -124,24 +135,25 @@
                         android:prompt="@string/pilih_kategori" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
-                android:layout_width="150dp"
+                android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
                 android:layout_gravity="end"
                 android:layout_below="@id/spinnerKategori"
                 android:background="@drawable/btn_orange">
+
                 <Button
-                    android:id="@+id/btn_tambahbarang"
+                    android:id="@+id/btn_editbarangEdit"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#00FFFFFF"
                     android:fontFamily="@font/poppins"
-                    android:text="Tambah Barang"
+                    android:text="Simpan Perubahan"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
             </LinearLayout>
-
 
         </LinearLayout>
 

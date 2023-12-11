@@ -11,11 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class RegisterUser extends AppCompatActivity {
-//    Button btnregisteruser;
-//    EditText etnamauser, etemailuser, etpassworduser;
-//    private AddDFP addDFP;
     private DbHelper dbHelper;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +30,6 @@ public class RegisterUser extends AppCompatActivity {
                 String username = etnamauser.getText().toString();
                 String email = etemailuser.getText().toString();
                 String password = etpassworduser.getText().toString();
-
                 if (!username.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
                     boolean success = dbHelper.addUser(username, email, password);
                     if (success) {

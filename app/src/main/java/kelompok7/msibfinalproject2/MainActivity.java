@@ -1,21 +1,16 @@
 package kelompok7.msibfinalproject2;
-
-import static android.widget.Toast.makeText;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private static final  int REQUEST_CODE = 10;
+//    private static final  int REQUEST_CODE = 10;
 
     Button btnregister, btnlogin, btnadminlogin, btnstafflogin;
+    TextView about;
     private DbHelper dbHelper;
 
 
@@ -28,11 +23,10 @@ public class MainActivity extends AppCompatActivity {
         btnlogin = findViewById(R.id.btn_login);
         btnadminlogin = findViewById(R.id.btn_adminlogin);
         btnstafflogin = findViewById(R.id.btn_stafflogin);
+        about = findViewById(R.id.about);
 
         dbHelper = new DbHelper(this);
         android.database.sqlite.SQLiteDatabase database = dbHelper.getWritableDatabase();
-
-        //Register
         btnregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LoginStaff.class);
+                startActivity(intent);
+            }
+        });
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AboutPage.class);
                 startActivity(intent);
             }
         });

@@ -45,19 +45,16 @@
                 android:textStyle="italic" />
         </LinearLayout>
     </LinearLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/layoutatas"
         android:padding="8dp">
-
         <LinearLayout
             android:id="@+id/layoutitem"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/btn_hijau">
-
             <Spinner
                 android:id="@+id/spinnerKategoriUser"
                 android:layout_width="match_parent"
@@ -67,7 +64,6 @@
                 android:paddingLeft="8dp"
                 android:prompt="@string/pilih_kategori" />
         </LinearLayout>
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -79,7 +75,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp">
             </androidx.recyclerview.widget.RecyclerView>
-
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

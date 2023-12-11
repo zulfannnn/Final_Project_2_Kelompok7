@@ -37,21 +37,23 @@ public class RegisterStaff extends AppCompatActivity {
         registrasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegisterStaff.this, LoginStaff.class);
-                startActivity(intent);
                 String name = ETname.getText().toString().trim();
                 String password = ETpassword.getText().toString().trim();
                 String cfrim_password = ETcfrimpassword.getText().toString().trim();
-                if (password.equals(cfrim_password)) {
+
+                if (name.equals("") || password.equals("")) {
+                    Toast.makeText(RegisterStaff.this, "Data Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
+                } else if (password.equals(cfrim_password)) {
                     long val = db.tambahStaff(name, password);
                     if (val > 0) {
-                        Toast.makeText(RegisterStaff.this, "Anda Berhasil Menambahkan Staff "+name, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterStaff.this, "Anda Berhasil Menambahkan Staff " + name, Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(RegisterStaff.this, LoginStaff.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(RegisterStaff.this, "Gagal Menambahkan Staff", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(RegisterStaff.this, "Password Tidak Sama", Toast.LENGTH_SHORT).show();
-                }
-                if (name.equals("") || password.equals("")) {
-                    Toast.makeText(RegisterStaff.this, "Data Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
                 }
             }
         });
